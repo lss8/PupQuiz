@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GOODDC__.TTF">
+            <string>GoodDogCool</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="pupQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cm2-lv-5LD">
+                                <rect key="frame" x="87" y="544" width="241" height="94"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.36862745099999999" green="0.66274509800000003" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Start"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start">
+                                    <fontDescription key="titleFontDescription" name="GoodDogCool" family="GoodDog Cool" pointSize="100"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="g6q-sM-WCQ" kind="presentation" modalPresentationStyle="fullScreen" id="VAR-1E-nZ8"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoPupQuiz" translatesAutoresizingMaskIntoConstraints="NO" id="xhw-Ny-7Lc">
+                                <rect key="frame" x="57" y="158" width="300" height="201"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.99215686274509807" green="0.97254901960784312" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yqD-mj-Vfk"/>
+                    <connections>
+                        <outlet property="logoImage" destination="xhw-Ny-7Lc" id="31w-dv-0DC"/>
+                        <outlet property="startButton" destination="Cm2-lv-5LD" id="l7z-ii-J6z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1137.68115942029" y="99.776785714285708"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="qNY-iT-4CF">
+            <objects>
+                <viewController id="gX1-Jd-Ypx" customClass="GameViewController" customModule="pupQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6jR-Nv-q6f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ijL-pq-NWU" userLabel="button1">
+                                <rect key="frame" x="29" y="479" width="160" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GoodDogCool" family="GoodDog Cool" pointSize="35"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Shiba Inu" backgroundImage="botaoNomeRaca"/>
+                                <connections>
+                                    <action selector="button1_1:" destination="g3W-bo-94y" eventType="touchUpInside" id="X2o-5w-d4h"/>
+                                    <action selector="tocou:" destination="gX1-Jd-Ypx" eventType="touchUpInside" id="zkr-t7-WSC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kj6-yq-1Bu" userLabel="button2C">
+                                <rect key="frame" x="224" y="479" width="160" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GoodDogCool" family="GoodDog Cool" pointSize="35"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Akita Inu" backgroundImage="botaoNomeRaca"/>
+                                <connections>
+                                    <action selector="tocou:" destination="gX1-Jd-Ypx" eventType="touchUpInside" id="OsQ-VY-vbR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXv-Za-djh" userLabel="button3">
+                                <rect key="frame" x="30" y="625" width="160" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GoodDogCool" family="GoodDog Cool" pointSize="35"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Jack Russel" backgroundImage="botaoNomeRaca"/>
+                                <connections>
+                                    <action selector="tocou:" destination="gX1-Jd-Ypx" eventType="touchUpInside" id="jqu-im-w1E"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cjm-aI-eyO" userLabel="button4">
+                                <rect key="frame" x="224" y="625" width="160" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GoodDogCool" family="GoodDog Cool" pointSize="35"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Corgi" backgroundImage="botaoNomeRaca"/>
+                                <connections>
+                                    <action selector="tocou:" destination="gX1-Jd-Ypx" eventType="touchUpInside" id="T0S-7i-BMK"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Coin gold" translatesAutoresizingMaskIntoConstraints="NO" id="ZT7-ba-WTs" userLabel="coin3">
+                                <rect key="frame" x="96" y="82" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Coin gold" translatesAutoresizingMaskIntoConstraints="NO" id="6Fv-oI-wyK" userLabel="coin2">
+                                <rect key="frame" x="62" y="82" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Coin gold" translatesAutoresizingMaskIntoConstraints="NO" id="1Sz-01-2W8" userLabel="coin1">
+                                <rect key="frame" x="29" y="82" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Vector" translatesAutoresizingMaskIntoConstraints="NO" id="P1l-0e-ngU" userLabel="heart1">
+                                <rect key="frame" x="280" y="88" width="31" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Vector" translatesAutoresizingMaskIntoConstraints="NO" id="a72-yn-hTt" userLabel="heart2">
+                                <rect key="frame" x="317" y="88" width="31" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Vector" translatesAutoresizingMaskIntoConstraints="NO" id="v7L-LF-mWY" userLabel="heart3">
+                                <rect key="frame" x="354" y="88" width="31" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1 / 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LaR-aM-SzN" userLabel="stageLabel">
+                                <rect key="frame" x="134" y="85" width="138" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GoodDogCool" family="GoodDog Cool" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="y7E-rn-tl9" userLabel="akitaPup">
+                                <rect key="frame" x="28" y="153" width="350" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PQc-8V-b01"/>
+                        <color key="backgroundColor" red="0.99215686270000003" green="0.97254901959999995" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8Hz-MF-nlF"/>
+                    <connections>
+                        <outlet property="akitaPup" destination="y7E-rn-tl9" id="5eU-6a-W2t"/>
+                        <outlet property="button1" destination="ijL-pq-NWU" id="2I6-9h-Jj2"/>
+                        <outlet property="button2C" destination="Kj6-yq-1Bu" id="ddO-uD-BKD"/>
+                        <outlet property="button3" destination="aXv-Za-djh" id="Mr7-Nb-Jld"/>
+                        <outlet property="button4" destination="Cjm-aI-eyO" id="IMO-er-CX8"/>
+                        <outlet property="coin1" destination="1Sz-01-2W8" id="0CN-DB-uPG"/>
+                        <outlet property="coin2" destination="6Fv-oI-wyK" id="bco-Kn-h8a"/>
+                        <outlet property="coin3" destination="ZT7-ba-WTs" id="2gr-Gz-5yo"/>
+                        <outlet property="heart1" destination="P1l-0e-ngU" id="OHp-YV-eDL"/>
+                        <outlet property="heart2" destination="a72-yn-hTt" id="kQZ-D6-igT"/>
+                        <outlet property="heart3" destination="v7L-LF-mWY" id="Yxa-Wa-6Ar"/>
+                        <outlet property="stageNumberLabel" destination="LaR-aM-SzN" id="KHo-SZ-FfA"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="perdeuJogo" modalPresentationStyle="fullScreen" id="bDC-zE-3u0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7m0-Rb-wiQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="g3W-bo-94y" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3185.507246376812" y="857.8125"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6hk-3t-xEm">
+            <objects>
+                <viewController id="FJd-DS-yTn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cyw-ea-DK5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Em Breve" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6C-IP-J7s">
+                                <rect key="frame" x="147" y="670" width="121" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="border_collie4" translatesAutoresizingMaskIntoConstraints="NO" id="IIv-qQ-Ui9">
+                                <rect key="frame" x="-96" y="134" width="607" height="447"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5XN-fP-d5Y"/>
+                        <color key="backgroundColor" red="0.99215686270000003" green="0.97254901959999995" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vrF-ZI-njI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B1h-bu-HJz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4211.594202898551" y="1604.4642857142856"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="pmy-2N-n9Y">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="g6q-sM-WCQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Ct1-xn-0Vx"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uBj-sD-s3h" customClass="UiTabBar1">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="1a1-a9-hVt" kind="relationship" relationship="viewControllers" id="8Ko-SA-gfh"/>
+                        <segue destination="uqR-6h-tnM" kind="relationship" relationship="viewControllers" id="XyZ-CU-Ct2"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4i1-JU-JsG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2277" y="100"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lSB-ds-h3H">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1a1-a9-hVt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="Property 1=Default" selectedImage="Property 1=Variant2" id="TaZ-he-bMu"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NiJ-3l-d36">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gX1-Jd-Ypx" kind="relationship" relationship="rootViewController" id="McQ-0B-Txc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sf5-Ry-Esd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2275.36231884058" y="857.8125"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8A3-Qr-EyM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uqR-6h-tnM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="album=Default" selectedImage="album=pressionado" id="guc-SK-k1P"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0k3-LX-Y15">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="FJd-DS-yTn" kind="relationship" relationship="rootViewController" id="bP7-Ou-NGo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z9V-Vo-caL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4213.04347826087" y="857.8125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1" width="800" height="742"/>
+        <image name="Coin gold" width="40" height="40"/>
+        <image name="Property 1=Default" width="195" height="96"/>
+        <image name="Property 1=Variant2" width="195" height="96"/>
+        <image name="Vector" width="31" height="27"/>
+        <image name="album=Default" width="195" height="96"/>
+        <image name="album=pressionado" width="195" height="96"/>
+        <image name="border_collie4" width="4000" height="6000"/>
+        <image name="botaoNomeRaca" width="168" height="128"/>
+        <image name="logoPupQuiz" width="227" height="187"/>
+    </resources>
+</document>
